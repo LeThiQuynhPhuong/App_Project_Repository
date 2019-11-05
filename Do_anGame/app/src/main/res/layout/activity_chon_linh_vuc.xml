@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChonLinhVucActivity">
+
+    <ImageView
+        android:id="@+id/imgDangNhap"
+        android:layout_width="62dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/avata"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars[1]" />
+    <Button
+        android:id="@+id/btnDangNhap"
+        android:layout_width="111dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="@string/btnDangNhap"
+        android:textColor="@color/colorPrimary"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/imgDangNhap"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="132dp"
+        android:layout_height="31dp"
+        android:text="@string/DienCaoNhat"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <Button
+        android:id="@+id/btnKH_TN"
+        android:layout_width="379dp"
+        android:layout_height="73dp"
+        android:layout_margin="15dp"
+        android:background="@color/colorAccent"
+        android:text="@string/btnKH_TN"
+        android:textColor="@color/colorPrimary"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnVH_XH"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:onClick="ChoiGame"/>/>
+
+    <Button
+        android:id="@+id/btnVH_XH"
+        android:layout_width="379dp"
+        android:layout_height="73dp"
+        android:layout_marginBottom="15dp"
+        android:background="@color/color_red"
+        android:text="@string/btnVH_XH"
+        android:textColor="@color/colorPrimary"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnLS"
+        app:layout_constraintEnd_toEndOf="@+id/btnKH_TN"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/btnKH_TN"
+        android:onClick="ChoiGame"/>
+
+    <Button
+        android:id="@+id/btnLS"
+        android:layout_width="379dp"
+        android:layout_height="73dp"
+        android:layout_marginBottom="68dp"
+        android:background="@color/color_violest"
+        android:onClick="ChoiGame"
+        android:text="@string/btnLS"
+        android:textColor="@color/colorPrimary"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btnVH_XH"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/btnVH_XH" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="148dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center"
+        android:text="CÂU HỎI"
+        android:textColor="@color/colorPRINT"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.523"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="100dp"
+        android:layout_height="144dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/color_bu"
+        android:gravity="center"
+        android:text="0"
+        android:textColor="@color/colorfff"
+        android:textSize="100sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:text="Chọn lĩnh vực"
+        app:layout_constraintBottom_toTopOf="@+id/btnKH_TN"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

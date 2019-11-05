@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:touchscreenBlocksFocus="false"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imgDangNhap"
+        android:layout_width="62dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/avata"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars[1]" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="132dp"
+        android:layout_height="31dp"
+        android:text="@string/DienCaoNhat"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <Button
+        android:id="@+id/btnDangNhap"
+        android:layout_width="111dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorPrimaryDark"
+        android:onClick="DangNhap"
+        android:text="@string/btnDangNhap"
+        android:textColor="@color/colorPrimary"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/imgDangNhap"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="251dp"
+        android:layout_height="194dp"
+
+        android:layout_marginStart="86dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginEnd="86dp"
+        android:src="@drawable/cauhoi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@mipmap/ic_launcher_round" />
+
+    <Button
+        android:id="@+id/btnChoiNgay"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_margin="15dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@color/colorAccent"
+        android:text="@string/btnChoiNgay"
+        android:textColor="@color/colorPrimary"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.523"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        android:onClick="TroChoiMoi"/>
+
+    <Button
+        android:id="@+id/btnLichSuChoi"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+
+        android:layout_marginTop="20dp"
+        android:background="@color/color_violest"
+        android:text="@string/btnLichSuChoi"
+        android:textColor="@color/colorPrimary"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/btnChoiNgay"
+        app:layout_constraintStart_toStartOf="@+id/btnChoiNgay"
+        app:layout_constraintTop_toBottomOf="@+id/btnChoiNgay" />
+
+    <Button
+        android:id="@+id/btnMuaCredit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/color_red"
+        android:text="@string/btnMuaCredit"
+        android:textColor="@color/colorPrimary"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/btnLichSuChoi"
+        app:layout_constraintStart_toStartOf="@+id/btnLichSuChoi"
+        app:layout_constraintTop_toBottomOf="@+id/btnLichSuChoi" />
+
+    <Button
+        android:id="@+id/btnQuanLyTaiKhoan"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/color_b"
+        android:text="@string/btnQuanLyTaiKhoan"
+        android:textColor="@color/colorPrimary"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/btnMuaCredit"
+        app:layout_constraintStart_toStartOf="@+id/btnMuaCredit"
+        app:layout_constraintTop_toBottomOf="@+id/btnMuaCredit" />
+</androidx.constraintlayout.widget.ConstraintLayout>

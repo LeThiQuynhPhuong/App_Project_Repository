@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Do_anGame</string>
+    <string name="TenDN">Tên đăng nhập</string>
+    <string name="btnQuanLyTaiKhoan">Quản Lý Tài Khoản</string>
+    <string name="DienCaoNhat">Điểm cao: 150</string>
+    <string name="btnLichSuChoi">Lịch Sử Chơi</string>
+    <string name="btnMuaCredit">Mua Credit</string>
+    <string name="btnChoiNgay">Trò Chơi Mới</string>
+    <string name="btnDangNhap">Đăng Nhập</string>
+    <string name="btnKH_TN">Khoa Học-Tự Nhiên</string>
+    <string name="btnVH_XH">Văn Học-Xã Hội</string>
+    <string name="btnLS">Lịch Sử</string>
+    <string name="buttonDangNhap">Đăng Nhập</string>
+    <string name="btnDangKy">Đăng ký</string>
+</resources>
