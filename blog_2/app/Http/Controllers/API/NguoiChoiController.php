@@ -17,4 +17,14 @@ class NguoiChoiController extends Controller
     	];
     	return response()->json($result);
     }
+public function CapNhatCreditNguoiChoi(Request $request)
+    {
+        
+
+        $nguoichoi = NguoiChoi::find($request->id);
+        $nguoichoi->credit=$request->credit;
+        $nguoichoi->save();
+
+    }
+
 }

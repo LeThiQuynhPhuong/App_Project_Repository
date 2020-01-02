@@ -5,7 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\CauHoi;
 use App\LinhVuc;
-
+use App\Http\Requests\CauHoiRequest;
+use App\Http\Requests\UpDateCauHoiRequest;
 class CauHoiController extends Controller
 {
     /**
@@ -109,5 +110,14 @@ class CauHoiController extends Controller
         $cauHoi->delete();
 
         return redirect()->route('cau-hoi.danh-sach');
+    }
+    public function showDeleted(){
+        $listCauHoiRestore = CauHoi::onlyTrashed()->get();
+        return view('cau-hoi.danh-sach', compact('listCauHoiRestore'));
+    }
+    
+    public function reStore($id){
+        CauHoi::withTrashed()->find($id)->restore();
+        return redirect()->route('cau-hoi.danh-sach')->with('thongbao','Khôi phục câu hỏi thành công');
     }
 }

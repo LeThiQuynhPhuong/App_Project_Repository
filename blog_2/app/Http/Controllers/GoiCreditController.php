@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\GoiCredit;
+use App\Http\Requests\GoiCreditRequest;
+use App\Http\Requests\UpDateGoiCreditRequest;
 
 class GoiCreditController extends Controller
 {
@@ -43,7 +45,7 @@ class GoiCreditController extends Controller
         $goiCredit->so_tien = $request->so_tien;
         $goiCredit->save();
 
-        return redirect()->route('goi-credit.danh-sach');
+        return redirect()->route('goi-credit.danh-sach')->with('thongbao','Thêm mới gói credit thành công');
     }
 
     /**
@@ -84,7 +86,7 @@ class GoiCreditController extends Controller
         $goiCredit->so_tien = $request->so_tien;
         $goiCredit ->save();
 
-        return redirect()->route('goi-credit.danh-sach');
+        return redirect()->route('goi-credit.danh-sach')->with('thongbao','Cập nhật gói credit thành công');
     }
 
     /**
@@ -98,6 +100,15 @@ class GoiCreditController extends Controller
         $goiCredit = GoiCredit::find($id);
         $goiCredit->delete();
 
-        return redirect()->route('goi-credit.danh-sach');
+        return redirect()->route('goi-credit.danh-sach')->with('thongbao','Xóa gói credit thành công');
+    }
+    public function showDeleted(){
+        $listGoiCreditRestore = GoiCredit::onlyTrashed()->get();
+        return view('goi-credit.danh-sach', compact('listGoiCreditRestore'));
+    }
+    
+    public function reStore($id){
+        GoiCredit::withTrashed()->find($id)->restore();
+        return redirect()->route('goi-credit.danh-sach')->with('thongbao','Khôi phục gói credit thành công');
     }
 }
