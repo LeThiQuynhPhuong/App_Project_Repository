@@ -11,40 +11,38 @@ class ThemNguoiChoiSeeder extends Seeder
      */
     public function run()
     {
-
-         $player[]=[
-        	'ten_dang_nhap' => 'hien',
-    		'mat_khau' => Hash::make('123456'),
-    		'mail' => 'ngochiennguyen0204@gmail.com',
-    		'hinh_dai_dien' => 'hinh1.jpg',
-    		'diem_cao_nhat' => '1000',
-    		'credit' => '100'
-
+         $nguoi_choi=[];
+        $nguoi_choi[]=[
+        	"ten_dang_nhap"=>"tuyet nhi",
+        	"mat_khau"=>"123",
+        	"mail"=>"a@gmail.com",
+        	"hinh_dai_dien"=>"1.png",
+        	"diem_cao_nhat"=>"10",
+        	"credit"=>"1"
         ];
-          $player[]=[
-        	'ten_dang_nhap' => 'nhi',
-    		'mat_khau' => Hash::make('123456'),
-    		'mail' => 'nhi1810@gmail.com',
-    		'hinh_dai_dien' => 'hinh2.jpg',
-    		'diem_cao_nhat' => '1000',
-    		'credit' => '100'
+        $nguoi_choi[]=[
+        	"ten_dang_nhap"=>"ngoc hien",
+        	"mat_khau"=>"abc",
+        	"mail"=>"b@gmail.com",
+        	"hinh_dai_dien"=>"2.png",
+        	"diem_cao_nhat"=>"12",
+        	"credit"=>"2"
         ];
-          $player[]=[
-        	'ten_dang_nhap' => 'phuong',
-    		'mat_khau' =>Hash::make('123456'),
-    		'mail' => 'phuong1503@gmail.com',
-    		'hinh_dai_dien' => 'hinh3.jpg',
-    		'diem_cao_nhat' => '1000',
-    		'credit' => '100'
+        $nguoi_choi[]=[
+        	"ten_dang_nhap"=>"quynh phuong",
+        	"mat_khau"=>"123abc",
+        	"mail"=>"c@gmail.com",
+        	"hinh_dai_dien"=>"3.png",
+        	"diem_cao_nhat"=>"9",
+        	"credit"=>"0"
         ];
-        $i = 1;
-		// Thêm lĩnh vực vào bảng linh_vuc trong CSDL
-		foreach ($player as $pl) {
-			echo "Them player thu " . $i . "\n";
-			App\NguoiChoi::create($pl);
-			$i++;
-		}
-		echo "Hoan thanh...";
+        $i=1;
+        foreach($nguoi_choi as $nc)
+        {
+        	echo "Them nguoi choi thu".$i."\n";
+        	App\NguoiChoi::create($nc);
+        	$i++;
+        }
+        echo "Hoan thanh...";
     }
-    	
 }

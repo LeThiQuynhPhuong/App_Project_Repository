@@ -87,4 +87,51 @@ class NguoiChoiController extends Controller
      $nguoichoi->save();     
    
    }
+   public function LayDanhSach(){
+        $listNguoiChoi = NguoiChoi::all()->orderBy('diem_cao_nhat','desc')->get();
+        $result=[
+            'success'=>true,
+            'data'=>$listNguoiChoi
+        ];
+        return response()->json($result);
+    }
+    public function LayDSLichSu()
+    {
+        $dslichsu = DB::table('nguoi_choi')
+        ->select('nguoi_choi.ten_dang_nhap','luot_choi.diem')
+        ->join('luot_choi','luot_choi.nguoi_choi_id','=','nguoi_choi.id')
+        ->orderBy('diem','desc')
+        ->distinct('nguoi_choi.ten_dang_nhap')
+        ->get('nguoi_choi.ten_dang_nhap');
+        $result=[
+            'success'=>true,
+            'data'=>$dslichsu
+        ];
+        return response()->json($result);
+    }
+
+public function CapNhatCreditNguoiChoi(Request $request)
+    {
+        
+
+        $nguoichoi = NguoiChoi::find($request->id);
+        $nguoichoi->credit=$request->credit;
+        $nguoichoi->save();
+
+    }
+
+    public function updatediem(Request $request,$id)
+    {
+        $nguoichoi=NguoiChoi::findOrFail($id);
+        $nguoichoi->diem_cao_nhat=$request->diem_cao_nhat;
+        $nguoichoi->save();
+        return response()->json();
+    }
+    public function updatecredit(Request $request,$id)
+    {
+        $nguoichoi=NguoiChoi::findOrFail($id);
+        $nguoichoi->credit=$request->credit;
+        $nguoichoi->save();
+        return response()->json();
+    }
 }

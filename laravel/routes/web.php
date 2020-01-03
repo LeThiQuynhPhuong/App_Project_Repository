@@ -37,27 +37,6 @@ Route::middleware('auth:web')->group(function()
 	});
 });
 
-
-Route::prefix('cau-hoi')->group(function() {
-	Route::name('cau-hoi.')->group(function() {
-		Route::get('/','CauHoiController@index')->name('danh-sach');
-		Route::get('them-moi','CauHoiController@create')->name('them-moi');
-		Route::post('them-moi','CauHoiController@store')->name('xu-ly-them-moi');
-		Route::get('cap-nhat/{id}','CauHoiController@edit')->name('cap-nhat');
-		Route::post('cap-nhat/{id}','CauHoiController@update')->name('xu-ly-cap-nhat');
-		Route::get('xoa/{id}','CauHoiController@destroy')->name('xoa');
-	});
-});
-Route::prefix('nguoi-choi')->group(function() {
-	Route::name('nguoi-choi.')->group(function() {
-		Route::get('/','NguoiChoiController@index')->name('danh-sach');
-		Route::get('them-moi','NguoiChoiController@create')->name('them-moi');
-		Route::post('them-moi','NguoiChoiController@store')->name('xu-ly-them-moi');
-		Route::get('cap-nhat/{id}','NguoiChoiController@edit')->name('cap-nhat');
-		Route::post('cap-nhat/{id}','NguoiChoiController@update')->name('xu-ly-cap-nhat');
-		Route::get('xoa/{id}','NguoiChoiController@destroy')->name('xoa');
-	});
-});
 Route::prefix('luot-choi')->group(function() {
 	Route::name('luot-choi.')->group(function() {
 		Route::get('/','LuotChoiController@index')->name('danh-sach');
@@ -91,3 +70,52 @@ Route::prefix('quan-tri-vien')->group(function() {
 	
 });
 
+Route::prefix('linh-vuc')->group(function(){
+	Route::name('linh-vuc.')->group(function(){ 
+		Route::get('/', 'LinhVucController@index')->name('danh-sach');
+		Route::get('them-moi', 'LinhVucController@create')->name('them-moi');
+		Route::post('them-moi', 'LinhVucController@store')->name('xu-ly-them-moi');
+		Route::get('cap-nhat/{id}', 'LinhVucController@edit')->name('cap-nhat');
+		Route::post('cap-nhat/{id}', 'LinhVucController@update')->name('xu-ly-cap-nhat');   
+		Route::get('xoa/{id}', 'LinhVucController@destroy')->name('xoa');
+		Route::get('restore', 'LinhVucController@showDeleted')->name('restore');
+		Route::get('restore/{id}', 'LinhVucController@reStore')->name('xu-ly-restore');
+	});
+});
+Route::prefix('goi-credit')->group(function() {
+	Route::name('goi-credit.')->group(function() {
+		Route::get('/','GoiCreditController@index')->name('danh-sach');
+		Route::get('them-moi','GoiCreditController@create')->name('them-moi');
+		Route::post('them-moi','GoiCreditController@store')->name('xu-ly-them-moi');
+		Route::get('cap-nhat/{id}','GoiCreditController@edit')->name('cap-nhat');
+		Route::post('cap-nhat/{id}','GoiCreditController@update')->name('xu-ly-cap-nhat');
+		Route::get('xoa/{id}','GoiCreditController@destroy')->name('xoa');
+		Route::get('restore', 'GoiCreditController@showDeleted')->name('restore');
+		Route::get('restore/{id}', 'GoiCreditController@reStore')->name('xu-ly-restore');
+	});
+});
+
+Route::prefix('cau-hoi')->group(function() {
+	Route::name('cau-hoi.')->group(function() {
+		Route::get('/','CauHoiController@index')->name('danh-sach');
+		Route::get('them-moi','CauHoiController@create')->name('them-moi');
+		Route::post('them-moi','CauHoiController@store')->name('xu-ly-them-moi');
+		Route::get('cap-nhat/{id}','CauHoiController@edit')->name('cap-nhat');
+		Route::post('cap-nhat/{id}','CauHoiController@update')->name('xu-ly-cap-nhat');
+		Route::get('xoa/{id}','CauHoiController@destroy')->name('xoa');
+		Route::get('restore', 'CauHoiController@showDeleted')->name('restore');
+		Route::get('restore/{id}', 'CauHoiController@reStore')->name('xu-ly-restore');
+	});
+});
+Route::prefix('nguoi-choi')->group(function() {
+	Route::name('nguoi-choi.')->group(function() {
+		Route::get('/','NguoiChoiController@index')->name('danh-sach');
+		Route::get('them-moi','NguoiChoiController@create')->name('them-moi');
+		Route::post('them-moi','NguoiChoiController@store')->name('xu-ly-them-moi');
+		Route::get('cap-nhat/{id}','NguoiChoiController@edit')->name('cap-nhat');
+		Route::post('cap-nhat/{id}','NguoiChoiController@update')->name('xu-ly-cap-nhat');
+		Route::get('xoa/{id}','NguoiChoiController@destroy')->name('xoa');
+		Route::get('restore', 'NguoiChoiController@showDeleted')->name('restore');
+		Route::get('restore/{id}', 'NguoiChoiController@reStore')->name('xu-ly-restore');
+	});
+});

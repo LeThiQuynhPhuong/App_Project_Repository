@@ -80,26 +80,12 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra("loaitk",loaitk);
         startActivity(intent);
     }
-
-
-    /*
-    public void goiAPI(View view)
-    {
-        final String token = mPreferences.getString("TOKEN", null);
-
-
-       // String token = mPreferences.getString("TOKEN", null);
-        new FetchAPIToken(){
-            @Override
-            protected void onPostExecute(String s) {
-                super.onPostExecute(s);
-                try {
-                    JSONObject jsonObject = new JSONObject(s);
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }.execute("layThongTin", "GET", token);
-
-
-            }
-     */
+    public void BangXepHang(View view){
+        Intent intent=new Intent(MainActivity.this,BangXepHang_form.class);
+        startActivity(intent);
+    }
+    public void MuaThemCredit(View view){
+        Intent intent=new Intent(MainActivity.this,Credit_form.class);
+        startActivity(intent);
+    }
 }

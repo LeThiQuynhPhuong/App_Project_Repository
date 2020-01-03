@@ -11,20 +11,21 @@ class ThemQuanTriVienSeeder extends Seeder
      */
     public function run()
     {
-         $admin[]=[
+        $admin = [];
+        $admin[]=[
         	"ten_dang_nhap" => "NgocHien",
-        	"mat_khau" =>Hash::make("hien123"),
+        	"mat_khau" => "hien123",
         	"ho_ten" => "Nguyễn Ngọc Hiền",
 
         ];
           $admin[]=[
         	"ten_dang_nhap" => "TuyetNhi",
-        	"mat_khau" =>Hash::make("nhi123") ,
+        	"mat_khau" => "nhi123",
         	"ho_ten" => "Lê Dư Tuyết Nhi",
         ];
           $admin[]=[
         	"ten_dang_nhap" => "QuynhPhuong",
-        	"mat_khau" => Hash::make("phuong123"),
+        	"mat_khau" => "phuong123",
         	"ho_ten" => "Lê Thị Quỳnh Phương",
         ];
         $i = 1;

@@ -35,3 +35,13 @@ Route::post('nguoi-choi/chinhsua-nguoichoi/{id}','API\NguoiChoiController@update
 //quên mk
 
 Route::post('nguoi-choi/cap_nhat_doimk/{id}','API\NguoiChoiController@CapNhatDoiMK');
+
+
+Route::get('nguoi-choi','API\NguoiChoiController@LayDanhSach');
+Route::get('goi-credit','API\GoiCreditController@layGoiCredit');
+Route::post('nguoi-choi/update-diem/{id}','API\NguoiChoiController@updatediem');
+Route::post('nguoi-choi/update-credit/{id}','API\NguoiChoiController@updatecredit');
+Route::post('luot-choi/them-luot-choi','API\LuotChoiController@store');
+Route::get('luot-choi/lay-luot-choi','API\LuotChoiController@LayLuotChoi');
+Route::post('nguoi-choi/cap-nhat-credit','API\NguoiChoiController@CapNhatCreditNguoiChoi');
+Route::post('ls-mua-credit/them-moi','API\LSMuaCreditController@ThemLichSuMua');
