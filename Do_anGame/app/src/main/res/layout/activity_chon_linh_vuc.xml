@@ -17,7 +17,7 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@tools:sample/avatars[1]" />
     <Button
-        android:id="@+id/btnDangNhap"
+        android:id="@+id/btnDangXuat"
         android:layout_width="111dp"
         android:layout_height="31dp"
         android:layout_marginTop="16dp"

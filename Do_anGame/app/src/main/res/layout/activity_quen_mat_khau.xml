@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#4E085A"
+    android:orientation="vertical"
+    tools:context=".QuenMatKhauActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/imghinhdaidienql"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/hinhdaidien" />
+
+        <TextView
+            android:id="@+id/txtdoianh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="150dp"
+
+            android:text="Xác nhận thông tin"
+            android:textColor="#FFC107"
+            android:textSize="24sp"
+            app:layout_constraintTop_toBottomOf="@+id/imghinhdaidienql" />
+
+        <Button
+            android:layout_width="71dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="290dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/ic_launcher_sua_foreground"
+
+
+            tools:ignore="MissingConstraints" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/edtTendangnhapquenmk"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btnbackround"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Tên tài khoản"
+            android:inputType="textPersonName"
+            android:textColor="#030303" />
+
+        <EditText
+            android:id="@+id/edtEmailquenmk"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btnbackround"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Email"
+            android:inputType="textPersonName"
+            android:textColor="#030303" />
+
+        <EditText
+            android:id="@+id/edt_dmk"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btnbackround"
+            android:ems="10"
+            android:gravity="center"
+            android:hint=" Đổi mật khẩu"
+            android:inputType="textPersonName"
+            android:password="false" />
+
+        <EditText
+            android:id="@+id/edt_xndmk"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btnbackround"
+            android:gravity="center"
+            android:hint="Xác nhận mật khẩu"
+            android:inputType="textPersonName"
+            android:password="false" />
+
+        <Button
+
+            android:id="@+id/btnLAYMK"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="#BEBE0D"
+            android:onClick="XacNhanYC"
+            android:text="Gửi yêu cầu"
+            android:textColor="#FCF8F8"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout>
