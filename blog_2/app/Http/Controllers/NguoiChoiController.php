@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\NguoiChoi;
 use App\LinhVuc;
+use App\Http\Requests\NguoiChoiRequest;
+use App\Http\Requests\UpDateNguoiChoiRequest;
 
 class NguoiChoiController extends Controller
 {
@@ -106,6 +108,16 @@ class NguoiChoiController extends Controller
         $nguoiChoi = nguoiChoi::find($id);
         $nguoiChoi->delete();
 
-        return redirect()->route('nguoi-choi.danh-sach');
+        return redirect()->route('nguoi-choi.danh-sach')->with('success','xóa thành công');
+    }
+
+    public function showDeleted(){
+        $listNguoiChoiRestore = NguoiChoi::onlyTrashed()->get();
+        return view('nguoi-choi.danh-sach', compact('listNguoiChoiRestore'));
+    }
+    
+    public function reStore($id){
+        NguoiChoi::withTrashed()->find($id)->restore();
+        return redirect()->route('nguoi-choi.danh-sach')->with('thongbao','Khôi phục người chơi thành công');
     }
 }

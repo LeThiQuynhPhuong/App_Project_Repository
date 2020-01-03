@@ -21,3 +21,6 @@ Route::get('linh-vuc', 'API\LinhVucController@layDanhSach');
 Route::get('cau-hoi', 'API\CauHoiController@layCauHoi');
 Route::get('luot-choi','API\LuotChoiController@layLuotChoi');
 //Route::get('ls-mua-credit','API\LSMuaCreditController@')
+Route::get('goi-credit','API\GoiCreditController@layGoiCredit');
+Route::get('nguoi-choi/cap-nhat-credit','API\NguoiChoiController@CapNhatCreditNguoiChoi');
+Route::get('ls-mua-credit/them-moi','API\LichSuMuaCreditController@ThemLichSuMua');
